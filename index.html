@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Svarvare | Embedded Systems & Signal Processing</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+        onload="renderMathInElement(document.body);"></script>
+
+    <style>
+        :root {
+            --text: #111;
+            --accent: #0000EE;
+            --bg: #fff;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
+            font-size: 1.20rem;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1050px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        header {
+            border-bottom: 4px double var(--text);
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-family: sans-serif;
+            font-size: 2.8rem;
+            margin: 0;
+            letter-spacing: -2px;
+            text-transform: uppercase;
+            line-height: 0.9;
+        }
+
+        .subtitle {
+            font-family: sans-serif;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            font-family: sans-serif;
+            font-size: 0.8rem;
+            border-bottom: 1px solid #000;
+            padding: 10px 0;
+            margin-bottom: 30px;
+            background: var(--bg);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        nav a {
+            margin-right: 20px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        h2 {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            margin-top: 60px;
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        h3 {
+            margin-bottom: 5px;
+            font-family: sans-serif;
+        }
+
+        .item {
+            margin-bottom: 40px;
+        }
+
+        .meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .data-chain {
+            font-family: 'IBM Plex Mono', monospace;
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px dashed #999;
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.8rem;
+            padding-bottom: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: square;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-cat {
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 10px;
+        }
+
+        .skill-cat strong {
+            font-family: sans-serif;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        a:hover {
+            background: #ffff00;
+            text-decoration: none;
+        }
+
+        .summary {
+            font-size: 1.25rem;
+            border-left: 4px solid #000;
+            padding-left: 20px;
+            margin: 40px 0;
+        }
+
+        footer {
+            margin-top: 100px;
+            padding: 40px 0;
+            border-top: 1px solid #000;
+            font-family: sans-serif;
+            font-size: 0.7rem;
+            color: #666;
+            text-align: center;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+
+<body id="top">
+
+    <div class="container">
+        <nav>
+            <a href="#top">[ HOME ]</a>
+            <a href="#experience">[ EXPERIENCE ]</a>
+            <a href="#projects">[ PROJECTS ]</a>
+            <a href="#education">[ EDUCATION ]</a>
+            <a href="#contact">[ CONTACT ]</a>
+        </nav>
+
+        <header>
+            <h1>Alexander Svarvare</h1>
+            <p class="subtitle">Embedded Systems & Signal Processing Engineer</p>
+        </header>
+
+        <div class="summary">
+            Engineer curing <strong>itching fingers</strong> at maker-spaces and an <strong>itching brain</strong> with
+            statistical algorithms. Focused on the full design cycle: from maths to
+            deployment.
+        </div>
+
+        <section id="experience">
+            <h2>Work Experience</h2>
+
+            <div class="item">
+                <h3>Embedded Engineer | Axis Communications AB</h3>
+                <p>
+                    Developing Yocto Linux C-drivers for upcoming body-worn cameras. Focus on thermal and battery
+                    management subsystems in both userspace and kernelspace.
+                </p>
+                <ul>
+                    <li><strong>Hardware/Software Alignment:</strong> Identified a critical mismatch in battery
+                        charging/discharge parameters during a supplier hand-over. Negotiated a hardware revision with
+                        the Shanghai-based supplier to align with current firmware constraints, enforcing
+                        hardware-software coherence.</li>
+                    <li><strong>Upstream Integrity:</strong> Collaborated with the internal kernel team and Shanghai
+                        office to ensure a unified driver architecture. By preventing a driver fork, I ensured the
+                        codebase remains compatible for future upstreaming to the Linux kernel.</li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Sole Embedded Systems Developer | Infonomy AB</h3>
+                <p>
+                    Hired as the sole embedded developer at a MedTech startup directly following graduation. Took
+                    full ownership of developing the hardware and application code for a multi-device product. The
+                    product consisted of a hub-sensor-cloud setup where the sensor (accelerometer/gyro) is situated
+                    at the patient's thigh to extract unique physiological data.
+                </p>
+
+                <div class="data-chain">
+                    IMU -(SPI)-> STM32 -(UART)-> NRF52 -(BLE)-> NRF52 -(UART)-> ESP32 -(WIFI)-> AWS
+                </div>
+
+
+
+                <ul>
+                    <li><strong>Software Optimization:</strong> Achieved 100× data throughput by implementing
+                        backpressure, octet-stream protocols and asynchronous worker pools. Reduced power consumption
+                        by 50% via stop-mode refinement and adaptive clock frequency.</li>
+                    <li><strong>Edge Computing:</strong> Lowered AWS operational costs by migrating data pre-processing
+                        from cloud to hub, reducing required vCores.</li>
+                    <li><strong>Hardware:</strong> Restructured signal transmission to free CPU-pins, enabling UART with
+                        RTS/CTS for improved reliability.</li>
+                    <li><strong>Hardware Debugging:</strong> Identified a critical system instability using oscilloscope
+                        verification, proving a hardware design error that I later fixed in firmware.</li>
+                    <li><strong>Manufacturing:</strong> Designed and 3D-printed custom production/test pogo-pin rigs
+                        <a href="images/jig.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View
+                            Custom Jig]</a>,
+                        bypassing expensive industrial tooling and accelerating iteration cycles.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="item">
+                <h3>Research Internship | EIT LTH/IEEE</h3>
+                <p>
+                    Awarded the IEEE AP-S Undergraduate Summer Research Scholarship with the project ”Massive
+                    MIMO Array Characterisation and Design Using Trimodal Patch Elements”. My professor recruited me for
+                    research after receiving top grade in his Electromagnetic Theory course. The project was extended to
+                    one year of research exposure.
+                </p>
+            </div>
+
+            <div class="item">
+                <h3>Radar Summer Internship | Axis Communications AB</h3>
+                <p>
+                    Explored and drafted calibration methodologies for radar arrays. Calibrating radars takes up
+                    valuable production floor space which the company sought to reduce.
+                </p>
+            </div>
+
+            <div class="item">
+                <h3>Self-employed electronics repairman (Since age 12)</h3>
+                <p>
+                    Diagnostics, water-damage repair, SMD-soldering, replacement and repair of consumer electronics.
+                </p>
+            </div>
+
+            <div class="item">
+                <h3>Instructor & Leader | Flygvapenfrivilliga (FVRF)</h3>
+                <p>
+                    Progressed from participant to instructor. Employed by the Swedish Armed Forces to lead
+                    military summer camps, managing groups of 50+ youth in high-discipline environments.
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+
+            <div class="item">
+                <h3>Self-designed Linear Microphone Array</h3>
+                <p>
+                    Designed the PCB in KiCad
+                    <a href="images/array.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View Whole
+                        Project]</a>.
+                    Corrected wiring errors by manually re-routing 0.2 mm traces
+                    <a href="images/pdm_mic.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View
+                        Closeup of Re-soldering]</a>
+                    using a razor blade
+                    <a href="images/trace.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View Cut
+                        Traces]</a>
+                    and fine-gauge copper wire.
+                </p>
+                <p>
+                    The system utilises an STM32 as an intermediary driver to sample sound from 8 PDM-mics, convert to
+                    PCM, and package the data for transmission over USB-OTG (with CRC) to Python. Current
+                    capabilities include verification of synchronous sampling and an angle estimation algorithm with
+                    real-time visualisation.
+                </p>
+                <p>
+                    Currently implementing the MUSIC (MUltiple SIgnal Classification) algorithm for angle
+                    estimation.<br>
+                    $$P_{MU}(\theta) = \frac{1}{\mathbf{a}^H(\theta)\mathbf{E}_n\mathbf{E}_n^H\mathbf{a}(\theta)}$$
+                    Next step: a resource-optimised Edge AI for human-event detection.
+                </p>
+            </div>
+
+            <div class="item">
+                <h3>Custom-built 10S9P Samsung 18650 25R e-bike battery system</h3>
+                <p>
+                    Engineered a 1+ kWh battery pack to cover my transportation needs instead of buying a car.
+                    The project included cell spot-welding, BMS integration, wiring, and mechanical mounting.
+                </p>
+            </div>
+
+            <div class="item">
+                <h3>Speciality Tool for Bike Seat Post Extraction</h3>
+                <p>
+                    My girlfriend's bike's seatpost had totally seized due to galvanic corrosion between the aluminium
+                    seatpost and the steel-bikeframe.
+                </p>
+                <p>
+                    I MMA welded the poles, TIG welded the handle and CNC metal lathed the axial ball-bearing housing.
+                    <a href="images/seatpost.jpg" target="_blank" style="font-size: 0.85rem; margin-left: 5px;">[ View
+                        Tool ]</a>
+                </p>
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="item">
+                <p><strong>Lund University, Faculty of Engineering | 2019 – 2024</strong><br>
+                    M.Sc. Electrical Engineering<br>
+                    Specialisation: High Frequency Electronics & Photonics <br>
+                    Algorithms on hardware, Optics, Radar, EM/IC
+                    Design</p>
+
+                <p style="margin-left: 20px; border-left: 2px solid #eee; padding-left: 15px;">
+                    <strong>Master Thesis | Sony</strong><br>
+                    <em>"Spatial degrees of freedom in the context of distributed MIMO antenna arrays for near field
+                        communications"</em><br>
+                    Reproduced existing research papers and derived a new approximation for the spatial Degrees of
+                    Freedom
+                    in distributed MIMO arrays. Validated theoretical models against electromagnetic
+                    simulations to determine usable communication modes in the near-field. <br>
+                    <a href="https://lup.lub.lu.se/student-papers/search/publication/9168146" target="_blank"
+                        style="font-size: 0.85rem; margin-top: 5px; display: inline-block;">[ Read full thesis at LUP
+                        ]</a>
+                </p>
+
+                <p><strong>Post-Graduate Studies: Mathematical Statistics | 2024 – 2025</strong><br>
+                    Selected Master’s level (50% of M.Sc. program) courses parallel to work to deepen my interest in
+                    signal processing and forecasting.<br>
+                    Time-series models, Forecasting, Volatility modelling, Finance, ML/AI</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Recognition</h2>
+            <div class="skills-grid">
+                <div class="skill-cat">
+                    <strong>Programming</strong>
+                    Python (NumPy, SciPy, Pandas), C/C++ (FreeRTOS/Bare-metal), Linux (Yocto/Bitbake), Matlab, Java,
+                    \( \LaTeX \)
+                </div>
+                <div class="skill-cat">
+                    <strong>Hardware & Protocols</strong>
+                    SPI, I2C, UART, BLE, TCP/IP, MQTT, Oscilloscopes, Logic Analysers, GNU Debugger (GDB)
+                </div>
+                <div class="skill-cat">
+                    <strong>Theory & Math</strong>
+                    Signal Processing, Time-series analysis, Forecasting, Radar, ML/AI
+                </div>
+                <div class="skill-cat">
+                    <strong>Fabrication</strong>
+                    MMA/TIG-welding, CNC-lathing, PCB Design (KiCad), 3D Printing, Woodworking
+                </div>
+                <div class="skill-cat">
+                    <strong>Recognition</strong>
+                    Acknowledged in three course books for algorithms (Simplex) and time-series analysis.
+                    <div style="margin-top: 5px; font-size: 0.75rem; font-family: sans-serif;">
+                        View proof:
+                        <a href="images/andreas1.png" target="_blank">[Andreas #1]</a>
+                        <a href="images/andreas2.png" target="_blank">[Andreas #2]</a>
+                        <a href="images/jonas.png" target="_blank">[Jonas]</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact & Connection</h2>
+            <p>
+                Based in Lund, Sweden. Always happy to grab a coffee and talk electronics, statistical modeling or
+                future
+                high-impact systems.
+            </p>
+            <p>
+                <strong>Email:</strong> <a href="mailto:alex.svarvare@gmail.com">alex.svarvare@gmail.com</a><br>
+                <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/alexandersvarvare/"
+                    target="_blank">linkedin.com/in/alexandersvarvare</a><br>
+                <strong>GitHub (Joined 2012):</strong> <a href="https://github.com/AlexanderKillen"
+                    target="_blank">github.com/AlexanderKillen</a>
+            </p>
+        </section>
+
+        <section id="cider"
+            style="text-align: left; margin-top: 60px; border-top: 1px solid #eee; padding-top: 20px; padding-bottom: 60px;">
+            <p style="font-family: monospace; font-size: 0.85rem; color: #666;">
+                > I like making cider.
+                <a href="images/cider.jpg" target="_blank" style="text-decoration: underline; color: #444;">
+                    [Want to see apples before they become alcohol?]
+                </a>
+            </p>
+        </section>
+
+        <footer>
+            &copy; 2026 Alexander Svarvare
+        </footer>
+    </div>
+
+</body>
+
+</html>
