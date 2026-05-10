@@ -200,34 +200,28 @@
 
         <div class="summary">
             Engineer curing <strong>itching fingers</strong> at maker-spaces and an <strong>itching brain</strong> with
-            statistical algorithms. Focused on the full design cycle: from maths to
-            deployment.
+            statistics. I enjoy trimming
+            microseconds, milliwatts and keeping the CPU pipeline full.
         </div>
 
         <section id="experience">
             <h2>Work Experience</h2>
 
             <div class="item">
-                <h3>Embedded Engineer | Axis Communications AB</h3>
+                <h3>Embedded Linux Engineer | Axis Communications AB</h3>
                 <p>
-                    Developing Yocto Linux C-drivers for upcoming body-worn cameras. Focus on thermal and battery
-                    management subsystems in both userspace and kernelspace.
+                    I code Yocto Linux C-drivers for body-worn systems, focusing on thermal and battery management
+                    subsystems across both userspace and kernel. I follow strict coding standards for safety critical
+                    code and have had to apply lock-free mechanisms to prevent race conditions. I ensure long-term
+                    software compatibility by following official Linux standards and contributing code to the mainline
+                    kernel.
                 </p>
-                <ul>
-                    <li><strong>Hardware/Software Alignment:</strong> Identified a critical mismatch in battery
-                        charging/discharge parameters during a supplier hand-over. Negotiated a hardware revision with
-                        the Shanghai-based supplier to align with current firmware constraints, enforcing
-                        hardware-software coherence.</li>
-                    <li><strong>Upstream Integrity:</strong> Collaborated with the internal kernel team and Shanghai
-                        office to ensure a unified driver architecture. By preventing a driver fork, I ensured the
-                        codebase remains compatible for future upstreaming to the Linux kernel.</li>
-                </ul>
             </div>
 
             <div class="item">
-                <h3>Sole Embedded Systems Developer | Infonomy AB</h3>
+                <h3>Sole Algorithm & Embedded Systems Engineer | Infonomy AB</h3>
                 <p>
-                    Hired as the sole embedded developer at a MedTech startup directly following graduation. Took
+                    Hired as the sole engineer at a MedTech startup directly following graduation. Took
                     full ownership of developing the hardware and application code for a multi-device product. The
                     product consisted of a hub-sensor-cloud setup where the sensor (accelerometer/gyro) is situated
                     at the patient's thigh to extract unique physiological data.
@@ -240,21 +234,28 @@
 
 
                 <ul>
-                    <li><strong>Software Optimization:</strong> Achieved 100× data throughput by implementing
-                        backpressure, octet-stream protocols and asynchronous worker pools. Reduced power consumption
-                        by 50% via stop-mode refinement and adaptive clock frequency.</li>
+                    <li><strong>Software Optimisation:</strong> Achieved 100× data throughput by implementing
+                        backpressure, octet-stream and asynchronous worker pools. Reduced power consumption
+                        by 50% by improving stop-mode usage and applying adaptive clock frequency.</li>
                     <li><strong>Edge Computing:</strong> Lowered AWS operational costs by migrating data pre-processing
-                        from cloud to hub, reducing required vCores.</li>
-                    <li><strong>Hardware:</strong> Restructured signal transmission to free CPU-pins, enabling UART with
-                        RTS/CTS for improved reliability.</li>
+                        from cloud to hub, reducing required vCores in cloud.</li>
+                    <li><strong>Hardware:</strong> Restructured the messaging design, which freed CPU pins to allow for
+                        SPI which together with DMA moved the data transmission bottleneck elsewhere.
+                    </li>
                     <li><strong>Hardware Debugging:</strong> Identified a critical system instability using oscilloscope
-                        verification, proving a hardware design error that I later fixed in firmware.</li>
-                    <li><strong>Manufacturing:</strong> Designed and 3D-printed custom production/test pogo-pin rigs
+                        verification, proving a hardware design error that I fixed in firmware.</li>
+                    <li><strong>Manufacturing:</strong> Designed and 3D-printed custom production pogo-pin rigs
                         <a href="images/jig.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View
                             Custom Jig]</a>,
                         bypassing expensive industrial tooling and accelerating iteration cycles.
                     </li>
                 </ul>
+
+                <p>
+                    <em><strong>Note:</strong> Technical results verified in recommendation letter by CEO. Available
+                        upon
+                        request.</em>
+                </p>
             </div>
 
             <div class="item">
@@ -262,8 +263,7 @@
                 <p>
                     Awarded the IEEE AP-S Undergraduate Summer Research Scholarship with the project ”Massive
                     MIMO Array Characterisation and Design Using Trimodal Patch Elements”. My professor recruited me for
-                    research after receiving top grade in his Electromagnetic Theory course. The project was extended to
-                    one year of research exposure.
+                    research after receiving top grade in his course Electromagnetic Theory.
                 </p>
             </div>
 
@@ -295,7 +295,7 @@
             <h2>Projects</h2>
 
             <div class="item">
-                <h3>Self-designed Linear Microphone Array</h3>
+                <h3>Self-designed Linear Microphone Array for drone detection</h3>
                 <p>
                     Designed the PCB in KiCad
                     <a href="images/array.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View Whole
@@ -310,15 +310,13 @@
                 </p>
                 <p>
                     The system utilises an STM32 as an intermediary driver to sample sound from 8 PDM-mics, convert to
-                    PCM, and package the data for transmission over USB-OTG (with CRC) to Python. Current
-                    capabilities include verification of synchronous sampling and an angle estimation algorithm with
+                    PCM, and package the data for transmission over USB to Python. Current
+                    capabilities include verification of synchronous sampling and an angle estimation algorithm
+                    (<strong>MUSIC</strong>) with
                     real-time visualisation.
                 </p>
                 <p>
-                    Currently implementing the MUSIC (MUltiple SIgnal Classification) algorithm for angle
-                    estimation.<br>
                     $$P_{MU}(\theta) = \frac{1}{\mathbf{a}^H(\theta)\mathbf{E}_n\mathbf{E}_n^H\mathbf{a}(\theta)}$$
-                    Next step: a resource-optimised Edge AI for human-event detection.
                 </p>
             </div>
 
@@ -333,7 +331,7 @@
             <div class="item">
                 <h3>Speciality Tool for Bike Seat Post Extraction</h3>
                 <p>
-                    My girlfriend's bike's seatpost had totally seized due to galvanic corrosion between the aluminium
+                    My girlfriend's bike seatpost had totally seized due to galvanic corrosion between the aluminium
                     seatpost and the steel-bikeframe.
                 </p>
                 <p>
@@ -367,9 +365,10 @@
                 </p>
 
                 <p><strong>Post-Graduate Studies: Mathematical Statistics | 2024 – 2025</strong><br>
-                    Selected Master’s level (50% of M.Sc. program) courses parallel to work to deepen my interest in
-                    signal processing and forecasting.<br>
-                    Time-series models, Forecasting, Volatility modelling, Finance, ML/AI</p>
+                    Selected Master’s level (50% of M.Sc. program) courses parallel to professional work to deepen my
+                    interest in
+                    probabilistic modelling and forecasting.<br>
+                    Time-series models, Forecasting, Volatility modelling, Financial Mathematics</p>
             </div>
         </section>
 
@@ -409,7 +408,7 @@
         <section id="contact">
             <h2>Contact & Connection</h2>
             <p>
-                Based in Lund, Sweden. Always happy to grab a coffee and talk electronics, statistical modeling or
+                Based in Lund, Sweden. Always happy to grab a coffee and talk electronics, statistical modelling or
                 future
                 high-impact systems.
             </p>
