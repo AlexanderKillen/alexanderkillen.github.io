@@ -18,6 +18,12 @@
             --bg: #fff;
         }
 
+        @media (prefers-color-scheme: dark) {
+            html {
+                filter: invert(1) hue-rotate(180deg);
+            }
+        }
+
         body {
             font-family: 'Georgia', serif;
             line-height: 1.7;
@@ -158,7 +164,6 @@
         }
 
         a:hover {
-            background: #ffff00;
             text-decoration: none;
         }
 
@@ -211,8 +216,8 @@
                 <h3>Embedded Linux Engineer | Axis Communications AB</h3>
                 <p>
                     I code Linux kernel C-drivers for body-worn cameras. My responsibility areas include
-                     battery management subsystems across both userspace and kernelspace. I write lock-free
-                      and low-latency drivers to guarantee system determinism and safety-critical reliability.
+                    battery management subsystems across both userspace and kernelspace. I write lock-free
+                    and low-latency drivers to guarantee system determinism and safety-critical reliability.
                 </p>
             </div>
 
