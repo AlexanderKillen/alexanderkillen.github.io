@@ -200,29 +200,28 @@
 
         <header>
             <h1>Alexander Svarvare</h1>
-            <p class="subtitle">Signal Processing & Embedded Systems Engineer</p>
+            <p class="subtitle">Low latency C/C++ & Signal Processing Engineer</p>
         </header>
 
         <div class="summary">
-            Engineer curing <strong>itching fingers</strong> at maker-spaces and an <strong>itching brain</strong> with
-            statistics. I enjoy trimming
-            microseconds, milliwatts and keeping the CPU pipeline full.
+            Engineer curing <strong>itching fingers</strong> by looking under the hood of programs and an <strong>itching brain</strong> with
+            statistics. I enjoy trimming microseconds and keeping the CPU pipeline full.
         </div>
 
         <section id="experience">
             <h2>Work Experience</h2>
 
             <div class="item">
-                <h3>Embedded Linux Engineer | Axis Communications AB</h3>
+                <h3>Linux Systems & Kernel Engineer | Axis Communications AB</h3>
                 <p>
-                    I code Linux kernel C-drivers for body-worn cameras. My responsibility areas include
-                    battery management subsystems across both userspace and kernelspace. I write lock-free
-                    and low-latency drivers to guarantee system determinism and safety-critical reliability.
+                    I write Linux kernel drivers for body-worn cameras. My responsibility areas include
+                    battery management subsystems across both userspace and kernelspace. I work with lock-free, asynchronous
+                    drivers to guarantee system determinism and safety-critical reliability.
                 </p>
             </div>
 
             <div class="item">
-                <h3>Sole Algorithm & Embedded Systems Engineer | Infonomy AB</h3>
+                <h3>Sole Algorithm & Systems Engineer | Infonomy AB</h3>
                 <p>
                     Hired as the sole engineer at a MedTech startup directly following graduation. Took
                     full ownership of developing the hardware and application code for a multi-device product. The
@@ -244,13 +243,6 @@
                         from cloud to hub, reducing required vCores in cloud.</li>
                     <li><strong>Hardware:</strong> Restructured the messaging design, which freed CPU pins to allow for
                         SPI which together with DMA moved the data transmission bottleneck elsewhere.
-                    </li>
-                    <li><strong>Hardware Debugging:</strong> Identified a critical system instability using oscilloscope
-                        verification, proving a hardware design error that I fixed in firmware.</li>
-                    <li><strong>Manufacturing:</strong> Designed and 3D-printed custom production pogo-pin rigs
-                        <a href="images/jig.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View
-                            Custom Jig]</a>,
-                        bypassing expensive industrial tooling and accelerating iteration cycles.
                     </li>
                 </ul>
 
@@ -279,9 +271,10 @@
             </div>
 
             <div class="item">
-                <h3>Self-employed electronics repairman (Since age 12)</h3>
+                <h3>Independent Electronics Repair & Diagnostics (Since age 12)</h3>
                 <p>
-                    Diagnostics, water-damage repair, SMD-soldering, replacement and repair of consumer electronics.
+                    My <strong>itching fingers</strong> started here. Combining soldering with an accidental repair business
+                    started my mission to understand what those small black squares did below the hood.
                 </p>
             </div>
 
@@ -300,20 +293,13 @@
             <div class="item">
                 <h3>Self-designed Linear Microphone Array for drone detection</h3>
                 <p>
-                    Designed the PCB in KiCad
+                    Built an 8-channel acoustic array
                     <a href="images/array.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View Whole
                         Project]</a>.
-                    Corrected wiring errors by manually re-routing 0.2 mm traces
-                    <a href="images/pdm_mic.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View
-                        Closeup of Re-soldering]</a>
-                    using a razor blade
-                    <a href="images/trace.jpg" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[View Cut
-                        Traces]</a>
-                    and fine-gauge copper wire.
                 </p>
                 <p>
-                    The system utilises an STM32 as an intermediary driver to sample sound from 8 PDM-mics, convert to
-                    PCM, and package the data for transmission over USB to Python. Current
+                    The system utilises an STM32 processing pipeline to sample sound from 8 PDM-mics, convert to
+                    PCM and package the data for transmission over USB to Python. Current
                     capabilities include verification of synchronous sampling and an angle estimation algorithm
                     (<strong>MUSIC</strong>) with
                     real-time visualisation.
@@ -323,26 +309,6 @@
                 </p>
             </div>
 
-            <div class="item">
-                <h3>Custom-built 10S9P Samsung 18650 25R e-bike battery system</h3>
-                <p>
-                    Engineered a 1+ kWh battery pack to cover my transportation needs instead of buying a car.
-                    The project included cell spot-welding, BMS integration, wiring, and mechanical mounting.
-                </p>
-            </div>
-
-            <div class="item">
-                <h3>Speciality Tool for Bike Seat Post Extraction</h3>
-                <p>
-                    My girlfriend's bike seatpost had totally seized due to galvanic corrosion between the aluminium
-                    seatpost and the steel-bikeframe.
-                </p>
-                <p>
-                    I MMA welded the poles, TIG welded the handle and CNC metal lathed the axial ball-bearing housing.
-                    <a href="images/seatpost.jpg" target="_blank" style="font-size: 0.85rem; margin-left: 5px;">[ View
-                        Tool ]</a>
-                </p>
-            </div>
         </section>
 
         <section id="education">
@@ -350,13 +316,15 @@
             <div class="item">
                 <p><strong>Lund University, Faculty of Engineering | 2019 – 2024</strong><br>
                     M.Sc. Electrical Engineering<br>
-                    Specialisation: High Frequency Electronics & Photonics <br>
-                    Algorithms on hardware, Optics, Radar, EM/IC
-                    Design</p>
+                    Specialisation: High Frequency Electronics & Photonics <br> <br>
+                    My fascination started where my knowledge stopped. I studied the physical limits of
+                    hardware performance, from transistor gates to optical networks, only to realize that
+                    the most elegant solutions are hardware-close algorithms built on mathematics that
+                    allows you to achieve better results through 'thousands of little secrets.'</p>
 
-                <p style="margin-left: 20px; border-left: 2px solid #eee; padding-left: 15px;">
+                    <p style="margin-left: 20px; border-left: 2px solid #eee; padding-left: 15px;">
                     <strong>Master Thesis | Sony</strong><br>
-                    <em>"Spatial degrees of freedom in the context of distributed MIMO antenna arrays for near field
+                     <em>"Spatial degrees of freedom in the context of distributed MIMO antenna arrays for near field
                         communications"</em><br>
                     Reproduced existing research papers and derived a new approximation for the spatial Degrees of
                     Freedom
@@ -368,10 +336,9 @@
                 </p>
 
                 <p><strong>Post-Graduate Studies: Mathematical Statistics | 2024 – 2025</strong><br>
-                    Selected Master’s level (50% of M.Sc. program) courses parallel to professional work to deepen my
-                    interest in
-                    probabilistic modelling and forecasting.<br>
-                    Time-series models, Forecasting, Volatility modelling, Financial Mathematics</p>
+                    Selected Master’s level (50% of M.Sc. program) courses taken parallel to professional work to cure my
+                     <strong>itching brain</strong>. Deepened my foundation in probabilistic modelling, time-series analysis,
+                        and financial mathematics.</p>
             </div>
         </section>
 
@@ -380,20 +347,16 @@
             <div class="skills-grid">
                 <div class="skill-cat">
                     <strong>Programming</strong>
-                    C++ (Cache and latency optimised), C (FreeRTOS/Bare-metal), Linux, Yocto, Python, Matlab, Java,
+                    C++ (Cache and latency optimised), C (FreeRTOS/Bare-metal), Multithreading, Linux Kernel & Userspace, Matlab, Java,
                     \( \LaTeX \)
                 </div>
                 <div class="skill-cat">
-                    <strong>Hardware & Protocols</strong>
-                    SPI, I2C, UART, BLE, TCP/IP, MQTT, Oscilloscopes, Logic Analysers, GNU Debugger (GDB)
+                    <strong>Networking & Low-Level Architecture</strong>
+                    BLE, TCP/IP, MQTT, Asynchronous I/O, GDB (GNU Debugger)
                 </div>
                 <div class="skill-cat">
                     <strong>Theory & Math</strong>
                     Signal Processing, Time-series analysis, Forecasting, Radar, ML/AI
-                </div>
-                <div class="skill-cat">
-                    <strong>Fabrication</strong>
-                    MMA/TIG-welding, CNC-lathing, PCB Design (KiCad), 3D Printing, Woodworking
                 </div>
                 <div class="skill-cat">
                     <strong>Recognition</strong>
@@ -411,8 +374,7 @@
         <section id="contact">
             <h2>Contact & Connection</h2>
             <p>
-                Always happy to grab a coffee and talk electronics, statistical modelling or
-                low-latency systems.
+                Always open to grab a coffee! Ask me about squeezing microseconds out of code, logic out of chaos, or alcohol out of apples.
             </p>
             <p>
                 <strong>Email:</strong> <a href="mailto:alex.svarvare@gmail.com">alex.svarvare@gmail.com</a><br>
