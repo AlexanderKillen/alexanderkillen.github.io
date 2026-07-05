@@ -291,6 +291,20 @@
             <h2>Projects</h2>
 
             <div class="item">
+            <h3>Ultra-Low Latency C++20 HFT Matching Engine</h3>
+            <p>
+                A low-latency, deterministic limit order book delivering <strong>sub-35 ns</strong> median latency and <strong>>12M ops/sec</strong> throughput 
+                <a href="https://github.com/AlexanderKillen/hft-matching-engine" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[Code]</a>.
+            </p>
+            <p>
+                The engine achieves O(1) performance by replacing conventional node-based structures with a bitmapped price-level approach. This design optimizes for <strong>L1 cache locality</strong> and hardware prefetching, effectively eliminating the pointer-chasing overhead found in traditional implementations.
+            </p>
+            <p>
+                Built on a zero-allocation architecture, the engine uses bit-packed order tokens for instant cancellations and an asynchronous, lock-free logging thread to isolate the critical matching path from I/O bottlenecks.
+            </p>
+            </div>
+
+            <div class="item">
                 <h3>Self-designed Linear Audio Array</h3>
                 <p>
                     Built an 8-channel acoustic array
