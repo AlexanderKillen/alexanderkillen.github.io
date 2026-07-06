@@ -291,10 +291,11 @@
             <h2>Projects</h2>
 
             <div class="item">
-            <h3>Ultra-Low Latency C++20 HFT Matching Engine</h3>
+            <h3>Ultra-Low Latency C++20 HFT Matching Engine
+            <a href="https://github.com/AlexanderKillen/hft-matching-engine" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[GitHub]</a>
+            </h3>
             <p>
-                A low-latency, deterministic limit order book delivering <strong>sub-35 ns</strong> median latency and <strong>>12M ops/sec</strong> throughput 
-                <a href="https://github.com/AlexanderKillen/hft-matching-engine" target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[Code]</a>.
+                A low-latency, deterministic limit order book delivering <strong>sub-35 ns</strong> median latency and <strong>>12M ops/sec</strong> throughput.
             </p>
             <p>
                 The engine achieves O(1) performance by replacing conventional node-based structures with a bitmapped price-level approach. This design optimizes for <strong>L1 cache locality</strong> and hardware prefetching, effectively eliminating the pointer-chasing overhead found in traditional implementations.
@@ -305,11 +306,12 @@
             </div>
 
             <div class="item">
-                <h3>Self-designed Linear Audio Array</h3>
-                <p>
-                    Built an 8-channel acoustic array
+                <h3>Self-designed Linear Microphone Array
                     <a href="https://github.com/AlexanderKillen/linear_audio_array"
-                     target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[Code]</a>.
+                     target="_blank" style="font-size: 0.8rem; margin-left: 3px;">[GitHub]</a>
+                </h3>
+                <p>
+                    Built an 8-channel PDM microphone array for real-time localisation.
                 </p>
                 <p>
                     The system utilises an STM32 processing pipeline to sample sound from 8 PDM-mics, convert to
